@@ -1,6 +1,8 @@
 Krypcak for Windows
 ================================
 
+Visit the [Krypcak homepage](http://www.zerosumsecurity.nl/krypcak.html).
+
 Krypcak is a software tool - alas currently available only for the Windows platform - which makes strong password-based encryption easy. Moreover, Krypcak can generate, store and further manage your passwords.
 
 Design goals

@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{547356CD-C6C8-4478-B401-43BE0D9CE81C}</ProjectGuid>
+    <RootNamespace>SafeNotes</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <ProjectName>Krypcak</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>Krypcak</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>Krypcak</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <AddModuleNamesToAssembly>
+      </AddModuleNamesToAssembly>
+      <ForceFileOutput>
+      </ForceFileOutput>
+      <ImageHasSafeExceptionHandlers>true</ImageHasSafeExceptionHandlers>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MinSpace</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\SafeNotes.rc2" />
+    <None Include="res\zss.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\afx\stdafx.h" />
+    <ClInclude Include="..\controls\GradientBox.h" />
+    <ClInclude Include="..\controls\PswdListCtrl.h" />
+    <ClInclude Include="..\controls\TabPasswords.h" />
+    <ClInclude Include="..\core\Core.h" />
+    <ClInclude Include="..\dialogs\DialogMessages.h" />
+    <ClInclude Include="..\dialogs\NewPasswordDlg.h" />
+    <ClInclude Include="..\dialogs\PasswordDlg.h" />
+    <ClInclude Include="..\dialogs\ProgressDlg.h" />
+    <ClInclude Include="..\dialogs\RandomDlg.h" />
+    <ClInclude Include="..\dialogs\SafeNotesDlg.h" />
+    <ClInclude Include="..\dialogs\SetPasswordDlg.h" />
+    <ClInclude Include="..\dialogs\ShowContentsDialog.h" />
+    <ClInclude Include="..\dialogs\WelcomeDlg.h" />
+    <ClInclude Include="..\keccak\brg_endian.h" />
+    <ClInclude Include="..\keccak\KeccakDuplex.h" />
+    <ClInclude Include="..\keccak\KeccakF-1600-interface.h" />
+    <ClInclude Include="..\main\SafeNotes.h" />
+    <ClInclude Include="..\prng\KrypcakPRNG.h" />
+    <ClInclude Include="..\resources\resource.h" />
+    <ClInclude Include="..\resources\woorden.h" />
+    <ClInclude Include="..\threads\KrypcakThreadInfo.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\controls\GradientBox.cpp" />
+    <ClCompile Include="..\controls\PswdListCtrl.cpp" />
+    <ClCompile Include="..\controls\TabPasswords.cpp" />
+    <ClCompile Include="..\core\Core.cpp" />
+    <ClCompile Include="..\dialogs\DialogMessages.cpp" />
+    <ClCompile Include="..\dialogs\NewPasswordDlg.cpp" />
+    <ClCompile Include="..\dialogs\PasswordDlg.cpp" />
+    <ClCompile Include="..\dialogs\ProgressDlg.cpp" />
+    <ClCompile Include="..\dialogs\RandomDlg.cpp" />
+    <ClCompile Include="..\dialogs\SafeNotesDlg.cpp" />
+    <ClCompile Include="..\dialogs\SetPasswordDlg.cpp" />
+    <ClCompile Include="..\dialogs\ShowContentsDialog.cpp" />
+    <ClCompile Include="..\dialogs\WelcomeDlg.cpp" />
+    <ClCompile Include="..\keccak\KeccakDuplex.c" />
+    <ClCompile Include="..\keccak\KeccakF-1600-inplace32BI.c" />
+    <ClCompile Include="..\main\SafeNotes.cpp" />
+    <ClCompile Include="..\prng\KrypcakPRNG.cpp" />
+    <ClCompile Include="..\threads\KrypcakThreadInfo.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SafeNotes.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="SafeNotes.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
